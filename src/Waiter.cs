@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Runtime.CompilerServices;
 
 namespace Ucu.Poo.Restaurant;
 
@@ -7,5 +8,13 @@ namespace Ucu.Poo.Restaurant;
 /// </summary>
 public class Waiter
 {
+    private string name;
     private ArrayList assignedTables = new ArrayList();
+
+    public Waiter(string NameWaiter);
+    {
+        this.name = NameWaiter;
+        
+    }
+    
 }
