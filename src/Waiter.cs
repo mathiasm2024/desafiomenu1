@@ -16,5 +16,24 @@ public class Waiter
         this.name = NameWaiter;
         
     }
-    
+
+    public string Name
+    {
+        get { return name; }
+    }
+
+    public void AssignTable(Table table);
+    {
+        if (table != null && !assignedTables.Contains(table)) ;
+        {
+            assignedTables.Add(table);
+        }
+    }
+    public void TakeOrder(Table table, Dish dish);
+    {
+        if (assignedTables.Contains(table)) ;
+        {
+            AddToOrder.Add(dish);
+        }
+    }
 }
