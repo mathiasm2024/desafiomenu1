@@ -7,9 +7,16 @@ using System.Collections;
 /// </summary>
 public class Table
 {
+    private int number;
+    private bool ocupado;
     private ArrayList order = new ArrayList();
     public bool HasOrders()
     {
         return this.order.Count > 0;
+    }
+
+    public void ()
+    {
+        return this.ocupado = True;
     }
 }
