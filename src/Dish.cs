@@ -5,5 +5,14 @@ namespace Ucu.Poo.Restaurant;
 /// </summary>
 public class Dish
 {
-    
+    private string name;
+    private int price;
+    private bool IsVegetarian;
+
+    public Dish(string unnombre, int unprecio, bool unapregunta)
+    {
+        this.name = unnombre;
+        this.price = unprecio;
+        this.IsVegetarian = unapregunta;
+    }
 }
