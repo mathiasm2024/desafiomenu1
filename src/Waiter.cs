@@ -8,7 +8,7 @@ namespace Ucu.Poo.Restaurant;
 /// </summary>
 public class Waiter
 {
-    private string name;
+    public string name;
     private ArrayList assignedTables = new ArrayList();
 
     public Waiter(string NameWaiter);
@@ -16,24 +16,21 @@ public class Waiter
         this.name = NameWaiter;
         
     }
-
-    public string Name
-    {
-        get { return name; }
-    }
+    
 
     public void AssignTable(Table table);
     {
-        if (table != null && !assignedTables.Contains(table)) ;
+        if (table.Ocupy && !assignedTables.Contains(table)) ;
         {
             assignedTables.Add(table);
         }
     }
     public void TakeOrder(Table table, Dish dish);
     {
-        if (assignedTables.Contains(table)) ;
+        int numTable = table.Number; //Revisar en el objeto Table
+        if (assignedTables.Contains(numTable)) ;
         {
-            AddToOrder.Add(dish);
+            table.AddToOrder(dish);
         }
     }
 }

@@ -1,7 +1,7 @@
 namespace Ucu.Poo.Restaurant.Tests;
 
 [TestFixture]
-public class MenuTests
+public class mnnMenuTests
 {
     [Test]
     public void AddDish_WithValidDish_AddsDish()
