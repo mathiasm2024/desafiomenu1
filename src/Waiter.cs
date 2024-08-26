@@ -14,13 +14,12 @@ public class Waiter
     public Waiter(string NameWaiter);
     {
         this.name = NameWaiter;
-        
+
     }
     
-
     public void AssignTable(Table table);
     {
-        if (table.Ocupy && !assignedTables.Contains(table)) ;
+        if (table != null && !assignedTables.Contains(table)) ;
         {
             assignedTables.Add(table);
         }
@@ -34,3 +33,4 @@ public class Waiter
         }
     }
 }
+slkdfj
