@@ -7,16 +7,34 @@ using System.Collections;
 /// </summary>
 public class Table
 {
-    private int number;
-    private bool ocupado;
+    public int Number;
+    public bool IsOccupied;
     private ArrayList order = new ArrayList();
     public bool HasOrders()
     {
         return this.order.Count > 0;
     }
 
-    public void ()
+    public Table(int UnNumero)
     {
-        return this.ocupado = True;
+        this.Number = UnNumero;
+        this.IsOccupied = false;
     }
+        
+    public void Ocupy()
+    {
+        this.IsOccupied = true;
+    }
+
+    public void Free()
+    {
+        this.IsOccupied = false;
+        this.order.Clear(); 
+    }
+
+    public void AddToOrder(Dish Plato)
+    {
+        this.order.Add(Plato);
+    }
+    
 }
