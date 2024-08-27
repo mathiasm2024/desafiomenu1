@@ -7,8 +7,11 @@ using System.Collections;
 /// </summary>
 public class Table
 {
-    private int Number;
-    private bool IsOccupied;
+
+    public int Number;
+    public bool IsOccupied;
+
+
     private ArrayList order = new ArrayList();
     public bool HasOrders()
     {
@@ -16,14 +19,29 @@ public class Table
     }
 
 
+
     public void Occupy()
     {
-        this.IsOccupied = True;
+        this.IsOccupied = true;
+    }
+
+    public Table(int UnNumero)
+    {
+        this.Number = UnNumero;
+        this.IsOccupied = false;
+    }
+        
+    public void Ocupy()
+    {
+        this.IsOccupied = true;
+
     }
 
     public void Free()
     {
-        this.IsOccupied = False;
+
+
+        this.IsOccupied = false;
         this.order.Clear(); 
     }
 
