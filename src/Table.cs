@@ -19,11 +19,7 @@ public class Table
     }
 
 
-
-    public void Occupy()
-    {
-        this.IsOccupied = true;
-    }
+    
 
     public Table(int UnNumero)
     {
